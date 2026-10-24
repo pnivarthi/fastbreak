@@ -1,0 +1,36 @@
+{
+  "season": "2021-22",
+  "games_by_phase": {
+    "regular": 1230,
+    "playoffs": 87
+  },
+  "tables": {
+    "teams": {
+      "rows": 30,
+      "sha256": "d931f702fbe7186bfe0a732f0dee6546f4125f2a139a0c4c03ca5d8d0b790cbc"
+    },
+    "players": {
+      "rows": 620,
+      "sha256": "9662287951e82566f66d1ea1061e154537bf1afb6c818c76e3b28481516b8c9c"
+    },
+    "games": {
+      "rows": 1317,
+      "sha256": "386a0c989b3ffdc0cd070e3831f8fb52642de41e7775529a74b3d1bbe69b1257"
+    },
+    "team_game_stats": {
+      "rows": 2634,
+      "sha256": "a682a5305979e0b2bbc1ec96b66118ac7c8b6ebf3cdfa3084950161c59fdfad1"
+    },
+    "player_game_stats": {
+      "rows": 33693,
+      "sha256": "17c32dbf42882dba22e2e7d6bb905a760bc57cebf9bb9f9df2534a7cc5edbc88"
+    }
+  },
+  "checks": [
+    "unique keys",
+    "foreign keys",
+    "two teams per game",
+    "all player points reconcile to team scores",
+    "Finals Game 6: GSW 103, BOS 90"
+  ]
+}

@@ -1,0 +1,22 @@
+name: fastbreak
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: fastbreak
+      POSTGRES_PASSWORD: fastbreak_local
+      POSTGRES_DB: fastbreak
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro
+      - ./db:/import:ro
+      - ./data/2021-22:/seed:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fastbreak -d fastbreak"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  postgres_data:

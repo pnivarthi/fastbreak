@@ -1,0 +1,8 @@
+.env
+bin/
+results/
+*.exe
+*.test
+*.prof
+data/raw/
+__pycache__/
